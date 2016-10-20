@@ -42,14 +42,16 @@ public class StackTest {
 	// – loo pinu, lisa (push) kaks elementi, võta (pop) kaks elementi ja
 	// kontrolli, et need on needsamad lisatud elemendid.
 	
-//	@Test
-//	public void () {
-//		Stack stack = new Stack();
-//		stack.push(3);
-//		stack.push(5);
-//		stack.pop();
-//		stack.pop(); // ctrl + alt + nool alla tuubeldab
-//
-//		assertThat(stack.getSize(), is(0));
-//}
+	@Test
+	public void popReturnsPushedElem() {
+		Stack stack = new Stack();
+		stack.push(3);
+		stack.push(5);
+		
+		int popedElement1 = stack.pop();
+		int popedElement2 = stack.pop();
+		
+		assertThat(popedElement1, is(5));
+		assertThat(popedElement2, is(3));
+}
 }

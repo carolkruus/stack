@@ -1,6 +1,7 @@
 package stack;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Stack {
 
@@ -17,14 +18,21 @@ public class Stack {
 	}
 
 	public void push(Integer i) {
+		stack[getSize()] = i;
 		size++;
 	}
 
 	public Integer pop() {
 		size--;
-		return null;
+		return stack[getSize()];
+		
 
 	}
-	
-	
+
+	@Override
+	public String toString() {
+
+		return Arrays.toString(stack);
+	}
+
 }
